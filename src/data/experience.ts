@@ -1,0 +1,65 @@
+import type { ExperienceEntry } from '../types';
+
+export const experience: ExperienceEntry[] = [
+  {
+    id: 'erp',
+    company: 'Modular ERP System (Project-Based)',
+    role: 'Full Stack Developer — .NET & Angular',
+    duration: 'Aug 2025 – Present',
+    location: 'Remote',
+    impact:
+      'Contributed to a multi-tenant ERP and accounting platform supporting financial management, inventory, organizational administration, and business operations — built on .NET 5, ASP.NET Core, EF Core, SQL Server and the ABP Framework, with Angular 12 administrative modules.',
+    achievements: [
+      'Implemented a double-entry accounting workflow for Journal, Payment, and Receipt Vouchers with posting and reversal operations that automatically synchronize transactions with the General Ledger while preserving accounting consistency.',
+      'Engineered a reusable invoice-to-inventory integration layer using interface-based abstractions and shared business services, enabling Sales, Purchase, and Return invoices to execute a unified stock-movement workflow with minimal code duplication.',
+      'Developed a modular General Ledger reporting engine with composable filtering, LINQ-based query composition, projections, pagination, and aggregation to support complex financial reporting requirements.',
+      'Implemented configurable business-validation rules for accounting operations — cost center, tax guide, currency, and account-specific constraints — ensuring accurate financial data before transaction posting.',
+      'Built secure RESTful APIs with JWT authentication within the ERP platform.',
+      'Developed administrative features in Angular 12, including a diff-based synchronization mechanism for Branch–Department assignments that batches additions, updates, and deletions into a single request, and integrated them with backend APIs while collaborating through Azure DevOps and deploying to SmarterASP.',
+    ],
+    technologies: [
+      'C#',
+      '.NET 5',
+      'ASP.NET Core',
+      'Entity Framework Core',
+      'ABP Framework',
+      'Angular 12',
+      'TypeScript',
+      'SQL Server',
+      'REST APIs',
+      'JWT Authentication',
+      'Azure DevOps',
+      'SmarterASP',
+    ],
+  },
+  {
+    id: 'ai-workflow',
+    company: 'AI Workflow Platform (Freelance Client)',
+    role: 'Freelance Backend Developer',
+    duration: 'Aug 2025 – Sep 2025',
+    location: 'Remote',
+    impact:
+      'Built the backend of an AI image-generation platform: a multi-service system integrating an ASP.NET Core Web API with a Python (Flask) microservice to orchestrate workflows executed by a self-hosted ComfyUI inference engine, including payments and credit-based execution.',
+    achievements: [
+      'Built secure APIs, payment processing, credit-based execution workflows, and service-to-service communication between the .NET backend and the AI inference engine.',
+      'Built a secure authentication and authorization system using ASP.NET Identity, JWT access tokens, refresh-token rotation, account-lockout policies, endpoint rate limiting, and custom email validation to protect against common authentication attacks.',
+      'Implemented Stripe Checkout and webhook processing with signature verification, replay protection, and idempotent event handling to guarantee accurate credit fulfillment and prevent duplicate payment processing.',
+      'Developed a transactional credit-management system that atomically records credit usage and automatically rolls back failed AI-generation requests, ensuring users are never charged for unsuccessful operations.',
+      'Designed a financial auditing model using EF Core to track payments, credit transactions, processed webhook events, and user sessions, enabling reliable reconciliation and operational traceability.',
+      'Built secure service-to-service communication between the ASP.NET Core API and the Flask microservice using authenticated internal APIs and dynamic workflow generation for AI inference requests.',
+    ],
+    technologies: [
+      'C#',
+      '.NET 9',
+      'ASP.NET Core',
+      'Entity Framework Core',
+      'ASP.NET Identity',
+      'SQL Server',
+      'MySQL',
+      'Python (Flask)',
+      'ComfyUI',
+      'Stripe',
+      'JWT Authentication',
+    ],
+  },
+];
