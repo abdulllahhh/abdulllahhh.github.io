@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, ArrowDown, FileDown } from 'lucide-react';
+import { GitBranch, Link, Mail, ArrowDown, FileDown } from 'lucide-react';
 import { profile } from '../../data/profile';
 import Button from '../ui/Button';
 
@@ -80,10 +80,10 @@ export default function Hero() {
           <Button href="#contact" variant="secondary" icon={<Mail className="h-4 w-4" />}>
             Contact Me
           </Button>
-          <Button href={profile.social.github} external variant="ghost" icon={<Github className="h-4 w-4" />}>
+          <Button href={profile.social.github} external variant="ghost" icon={<GitBranch className="h-4 w-4" />}>
             GitHub
           </Button>
-          <Button href={profile.social.linkedin} external variant="ghost" icon={<Linkedin className="h-4 w-4" />}>
+          <Button href={profile.social.linkedin} external variant="ghost" icon={<Link className="h-4 w-4" />}>
             LinkedIn
           </Button>
         </motion.div>

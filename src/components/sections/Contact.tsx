@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, MapPin, FileDown } from 'lucide-react';
+import { GitBranch, Link, Mail, MapPin, FileDown } from 'lucide-react';
 import { profile } from '../../data/profile';
 import SectionHeading from '../ui/SectionHeading';
 import Button from '../ui/Button';
@@ -6,13 +6,13 @@ import Button from '../ui/Button';
 const contactRows = [
   { icon: Mail, label: 'Email', value: profile.social.email, href: `mailto:${profile.social.email}` },
   {
-    icon: Github,
+    icon: GitBranch,
     label: 'GitHub',
     value: profile.social.github.replace('https://', ''),
     href: profile.social.github,
   },
   {
-    icon: Linkedin,
+    icon: Link,
     label: 'LinkedIn',
     value: profile.social.linkedin.replace('http://www.', ''),
     href: profile.social.linkedin,

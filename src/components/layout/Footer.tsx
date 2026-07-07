@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { GitBranch, Link, Mail } from 'lucide-react';
 import { profile } from '../../data/profile';
 
 export default function Footer() {
@@ -22,7 +22,7 @@ export default function Footer() {
             aria-label="GitHub"
             className="text-ink-soft dark:text-ink-dark-soft hover:text-accent dark:hover:text-accent-dark transition-colors"
           >
-            <Github className="h-5 w-5" />
+            <GitBranch className="h-5 w-5" />
           </a>
           <a
             href={profile.social.linkedin}
@@ -31,7 +31,7 @@ export default function Footer() {
             aria-label="LinkedIn"
             className="text-ink-soft dark:text-ink-dark-soft hover:text-accent dark:hover:text-accent-dark transition-colors"
           >
-            <Linkedin className="h-5 w-5" />
+            <Link className="h-5 w-5" />
           </a>
           <a
             href={`mailto:${profile.social.email}`}

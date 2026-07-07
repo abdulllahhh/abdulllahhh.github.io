@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, ArrowRight } from 'lucide-react';
+import { GitBranch, ArrowRight } from 'lucide-react';
 import type { ProjectEntry } from '../../types';
 import Badge from '../ui/Badge';
 import PlaceholderVisual from '../ui/PlaceholderVisual';
@@ -73,7 +73,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               className="flex h-9 w-9 items-center justify-center rounded-lg border border-line dark:border-line-dark text-ink-soft dark:text-ink-dark-soft hover:text-accent dark:hover:text-accent-dark hover:border-accent dark:hover:border-accent-dark transition-colors"
               aria-label={`${project.name} on GitHub`}
             >
-              <Github className="h-4 w-4" />
+              <GitBranch className="h-4 w-4" />
             </a>
           )}
         </div>
