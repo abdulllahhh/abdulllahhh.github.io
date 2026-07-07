@@ -16,7 +16,7 @@ A SaaS-landing-page-style portfolio built with React + TypeScript + Vite, genera
 ```bash
 npm install
 npm run dev       # local dev server
-npm run build     # production build -> dist/
+npm run build     # production build -> docs/
 npm run preview   # preview the production build locally
 ```
 
@@ -45,14 +45,11 @@ All content lives in `src/data/*.ts`, typed against `src/types/index.ts`. There 
 Since this deploys as a **user/organization site** (not a project site), it's served from the domain root, so no `base` path change is needed — `vite.config.ts` is already set to `base: '/'`.
 
 1. Push this project to a repo named exactly `abdulllahhh.github.io`.
-2. Add a deploy workflow, or simply:
-   ```bash
-   npm run build
-   npx gh-pages -d dist
-   ```
-   (install once with `npm i -D gh-pages`, then add `"deploy": "gh-pages -d dist"` to `package.json` scripts).
-3. In the repo's Settings → Pages, set the source to the `gh-pages` branch (or GitHub Actions, if you set up a workflow instead).
+2. Run `npm run build` and commit the generated `docs/` folder.
+3. In the repo's Settings → Pages, set the source to **Deploy from a branch**, branch `main`, folder `/docs`.
 4. Your site will be live at `https://abdulllahhh.github.io`.
+
+Do not publish from the repository root. The root `index.html` is Vite's development entry and points to `/src/main.tsx`; GitHub Pages will serve that `.tsx` file with the wrong MIME type instead of bundling it.
 
 > If you later rename the repo to something other than `<username>.github.io`, it becomes a *project* site served at `/<repo-name>/`, and you'll need to set `base: '/<repo-name>/'` in `vite.config.ts`.
 
@@ -60,14 +57,14 @@ Since this deploys as a **user/organization site** (not a project site), it's se
 
 1. Push the project to GitHub.
 2. Import the repo at [vercel.com/new](https://vercel.com/new).
-3. Framework preset: **Vite**. Build command `npm run build`, output directory `dist` (Vercel usually detects this automatically).
+3. Framework preset: **Vite**. Build command `npm run build`, output directory `docs`.
 4. Deploy — Vercel will give you a URL immediately and redeploy on every push.
 
 ### Netlify
 
 1. Push the project to GitHub.
 2. In Netlify, "Add new site" → "Import an existing project".
-3. Build command: `npm run build`. Publish directory: `dist`.
+3. Build command: `npm run build`. Publish directory: `docs`.
 4. Deploy.
 
 ## Accessibility & performance notes
