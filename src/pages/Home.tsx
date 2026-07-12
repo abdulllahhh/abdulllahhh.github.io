@@ -20,7 +20,12 @@ export default function Home() {
         <meta property="og:title" content={`${profile.name} — ${profile.title}`} />
         <meta property="og:description" content={profile.summary} />
         <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary" />
+        <meta property="og:image" content="https://abdulllahhh.github.io/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://abdulllahhh.github.io" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://abdulllahhh.github.io/og-image.png" />
       </Helmet>
 
       <Hero />
